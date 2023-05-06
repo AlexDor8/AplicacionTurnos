@@ -27,4 +27,16 @@ public class Service {
 		dao.marcarComoConsultado(id);
 		System.out.println("Consulta actualizada");
 	}
+	
+	public void eliminarConsulta(String nombre) throws ClassNotFoundException, SQLException {
+		dao.connectar();
+		dao.eliminarConsulta(nombre);
+		System.out.println("Consulta eliminada");
+	}
+	
+	public void insertarConsulta(String nombre) throws ClassNotFoundException, SQLException {
+		dao.connectar();
+		dao.insertarConsulta(nombre);
+		System.out.println("Consulta insertada");
+	}
 }

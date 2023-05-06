@@ -59,4 +59,18 @@ public class Dao {
 			ps.execute();
 		}
 	}
+	
+	public void eliminarConsulta(String nombre) throws SQLException {
+		try(PreparedStatement ps = conexion.prepareStatement(ELIMINAR_CONSULTA)) {
+			ps.setString(1, nombre);
+			ps.execute();
+		}
+	}
+	
+	public void insertarConsulta(String nombre) throws SQLException {
+		try(PreparedStatement ps = conexion.prepareStatement(INSERTAR_CONSULTA)) {
+			ps.setString(1, nombre);
+			ps.execute();
+		}
+	}
 }
